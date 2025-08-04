@@ -1,24 +1,17 @@
 import { Star } from "lucide-react";
 
-const ReviewStats = () => {
-  return (
-    <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md">
-      <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
-        <div className="text-center">
-          <p className="text-4xl font-extrabold text-gray-900 dark:text-white">15K+</p>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Satisfied learners</p>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center space-x-1 text-4xl font-extrabold text-gray-900 dark:text-white">
-            <span>5</span>
-            <Star className="text-yellow-400 w-8 h-8" />
-          </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400">(12,323 ratings)</p>
-        </div>
-      </div>
+const ReviewStats = () => (
+  <div className="bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 p-7 rounded-2xl shadow border border-gray-200 dark:border-gray-800 flex justify-between items-center gap-8">
+    <div className="flex flex-col items-center">
+      <span className="text-4xl font-extrabold text-blue-700 dark:text-blue-400">15K+</span>
+      <span className="text-sm text-gray-600 dark:text-gray-400 mt-1">Satisfied learners</span>
     </div>
-  );
-};
-
+    <div className="flex flex-col items-center">
+      <span className="flex items-center gap-1 text-4xl font-extrabold text-yellow-500">
+        5 <Star className="w-7 h-7" />
+      </span>
+      <span className="text-sm text-gray-600 dark:text-gray-400 mt-1">(12,323 ratings)</span>
+    </div>
+  </div>
+);
 export default ReviewStats;

@@ -8,7 +8,7 @@ const MenubarTop = () => {
   ];
 
   return (
-    <nav className="flex space-x-20 text-black dark:text-white font-semibold text-2xl select-none">
+    <nav className="flex space-x-20 text-black dark:text-white font-semibold text-xl select-none">
       {menuItems.map((item) => (
         <button
           key={item}

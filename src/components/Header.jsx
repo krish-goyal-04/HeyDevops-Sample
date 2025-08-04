@@ -3,57 +3,35 @@ import { ThemeToggleButton } from "./ThemeToggleButton";
 import {Button} from "./ui/button"
 const Header = () => {
   return (
-    <header
-      className="
-        flex items-center justify-between w-full 
-        bg-blue-500 dark:bg-gray-900 
-        border-b border-gray-200 dark:border-gray-700
-        px-10 py-6
-        rounded-2xl
-        shadow-2xl
-        transition-colors duration-300
-        select-none
-      "
-    >
-    <div className="flex-shrink-0">
-    <div className="bg-white dark:bg-gray-200 rounded-xl shadow-2xl p-2 border border-gray-300 dark:border-gray-700">
-        <img
-        src="/assets/heydevops-logo.png"
-        alt="HeyDevOps Logo"
-        className="h-14 w-auto"
-        draggable={false}
-        />
-    </div>
-    </div>
+    <header className="bg-gradient-to-r from-blue-600 to-blue-700 dark:bg-gradient-to-r dark:from-gray-800  dark:to-gray-900 shadow-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex items-center justify-between py-4">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <div className="bg-white dark:bg-gray-100 rounded-xl shadow-lg p-3 border border-gray-200 dark:border-gray-300 mr-10">
+              <img
+                src="/assets/heydevops-logo.png"
+                alt="HeyDevOps Logo"
+                className="h-12 w-auto"
+                draggable={false}
+              />
+            </div>
+          </div>
 
+          {/* Navigation */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <MenubarTop />
+          </div>
 
-    <div className="flex-1 flex justify-center">
-    <MenubarTop />
-    </div>
-
-    <div >
-    <ThemeToggleButton />
-    </div>
-
-    <div className=" ml-4 ">
-        <Button
-            className="
-                h-10
-                text-lg p-4
-                bg-white text-blue-600 font-semibold
-                px-5 py-2 rounded-lg shadow-sm
-                hover:bg-blue-100 hover:text-blue-700
-                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
-                transition
-                dark:bg-blue-700 dark:text-white
-                dark:hover:bg-blue-900
-                dark:focus:ring-blue-400
-            "
-            >Login
-        </Button>
-    </div>
-
-    
+          {/* Right side */}
+          <div className="flex items-center gap-4 ml-10">
+            <ThemeToggleButton />
+            <Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-2 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg">
+              Login
+            </Button>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

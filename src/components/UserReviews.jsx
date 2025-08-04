@@ -64,17 +64,10 @@ const UserReviews = () => (
       <CarouselContent>
         {reviews.map((review) => (
           <CarouselItem key={review.id}>
-            <div className="bg-gray-900 text-white rounded-2xl shadow-xl p-8 min-h-[280px] flex flex-col justify-center items-center relative">
-              {/* Quote Icon */}
-              <FaQuoteLeft className="absolute top-4 left-6 text-2xl text-blue-300/40" />
-              
-              {/* Reviewer Name */}
-              <h3 className="text-xl font-semibold mb-2 border-b-2 border-yellow-400 pb-1 px-2">
-                {review.name}
-              </h3>
-              
-              {/* Stars */}
-              <div className="flex mb-4">
+            <div className="bg-[#16213e] dark:bg-[#202b45] text-white rounded-2xl shadow-lg border border-blue-800/20 p-7 min-h-[250px] flex flex-col justify-between relative">
+              <FaQuoteLeft className="absolute top-4 left-6 text-2xl text-blue-400/60" />
+              <h3 className="text-lg font-bold mb-2 tracking-wide border-b border-yellow-400/70 pb-1 w-max mx-auto">{review.name}</h3>
+              <div className="flex justify-center mb-2">
                 {Array.from({ length: review.rating }).map((_, i) => (
                   <span key={i} className="text-yellow-400 text-lg">★</span>
                 ))}
@@ -82,19 +75,17 @@ const UserReviews = () => (
                   <span key={i} className="text-gray-500 text-lg">★</span>
                 ))}
               </div>
-              
-              {/* Review Text */}
-              <p className="text-center text-blue-100 italic leading-relaxed">
+              <blockquote className="text-center text-blue-100 italic leading-relaxed mt-2">
                 "{review.comment}"
-              </p>
+              </blockquote>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-4" />
-      <CarouselNext className="right-4" />
+      <CarouselPrevious className="left-3 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full z-10 shadow transition" />
+      <CarouselNext className="right-3 bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full z-10 shadow transition" />
     </Carousel>
   </div>
 );
-
 export default UserReviews;
+
