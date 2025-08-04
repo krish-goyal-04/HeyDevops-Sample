@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
+
 const MenubarTop = () => {
   const menuItems = [
-    "Home",
-    "Courses",
-    "Devops Lab",
-    "Placement Stories",
-    "Companies"
+    { name: "Home", path: "/" },
+    { name: "Courses", path: "/batch12" },
+    { name: "Devops Lab", path: "/devops-lab" },
+    { name: "Placement Stories", path: "/placement-stories" },
+    { name: "Companies", path: "/companies" },
   ];
 
   return (
     <nav className="flex space-x-20 text-black dark:text-white font-semibold text-xl select-none">
-      {menuItems.map((item) => (
-        <button
-          key={item}
-          type="button"
+      {menuItems.map(({ name, path }) => (
+        <Link
+          key={name}
+          to={path}
           className="
             relative px-1
             text-black dark:text-white
@@ -24,10 +26,9 @@ const MenubarTop = () => {
             hover:after:w-full after:transition-all
           "
         >
-          {item}
-        </button>
+          {name}
+        </Link>
       ))}
-      
     </nav>
   );
 };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MenubarTop from "./MenubarTop";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import {Button} from "./ui/button"
@@ -9,12 +10,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="bg-white dark:bg-gray-100 rounded-xl shadow-lg p-3 border border-gray-200 dark:border-gray-300 mr-10">
-              <img
+              <Link to="/"><img
                 src="/assets/heydevops-logo.png"
                 alt="HeyDevOps Logo"
                 className="h-12 w-auto"
                 draggable={false}
-              />
+              /></Link>
             </div>
           </div>
 
@@ -26,9 +27,9 @@ const Header = () => {
           {/* Right side */}
           <div className="flex items-center gap-4 ml-10">
             <ThemeToggleButton />
-            <Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-2 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg">
+            <Link to="/login"><Button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-2 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg">
               Login
-            </Button>
+            </Button></Link>
           </div>
         </div>
       </div>

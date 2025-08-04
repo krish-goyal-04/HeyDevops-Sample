@@ -35,7 +35,7 @@ const jobGuidanceData = [
 
 export default function JobGuidance() {
   return (
-    <section className="w-full py-16 bg-gray-900 rounded-2xl">
+    <section className="w-full py-16 dark:bg-gray-900 bg-gray-600 rounded-2xl">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white text-center mb-10 tracking-tight">
           JOB GUIDANCE
