@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CheckCircle } from "lucide-react"; // Swap with your preferred icons if needed
 
 const learningPoints = [
-  "Linux fundamentals/Networking/Administration",
+  "Linux fundamentals /Networking /Administration   ",
   "Git in-depth features and commands",
   "Jenkins CICD DevSecOps pipelines",
   "Jenkins Internals, Jenkins Setup, and Starter Projects",
@@ -75,12 +75,20 @@ export default function CourseLearning() {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {visibleItems.map((item, index) => (
-          <div
+         <div
             key={index}
-            className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
-          >
+            className="
+              flex items-start gap-3 text-gray-700 dark:text-gray-300
+              dark:hover:bg-white dark:hover:text-gray-900
+              hover:bg-gray-200 hover:text-gray-900
+              transition-colors duration-300 ease-in-out
+              rounded-md p-2
+              cursor-pointer
+              overflow-hidden
+            "
+            >
             <CheckCircle className="w-7 h-7 text-green-500 mt-1 flex-shrink-0" />
-            <p className="text-lg leading-relaxed font-semibold">{item}</p>
+            <p className="text-lg leading-relaxed font-semibold ">{item}</p>
           </div>
         ))}
       </div>

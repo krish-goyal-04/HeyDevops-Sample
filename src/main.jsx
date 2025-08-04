@@ -11,12 +11,14 @@ import Courses from './components/Courses.jsx'
 import DevopsLab from './components/DevopsLab.jsx'
 import PlacementStories from "./components/PlacementStories.jsx"
 import Companies from "./components/Companies.jsx"
+import Footer from './components/Footer.jsx'
 
 const AppLayout = ()=>{
   return(
     <div>
       <Header />
-      <Outlet />
+      <main className="min-h-screen grid grid-rows-[1fr_auto]"><Outlet /></main>
+      <Footer />
     </div>
   )
 }

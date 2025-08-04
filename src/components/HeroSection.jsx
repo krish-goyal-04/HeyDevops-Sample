@@ -1,6 +1,7 @@
 import { Play, Users, BookOpen, GraduationCap } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion"; 
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -37,13 +38,13 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14"
           >
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 font-semibold">
+           <Link to="/batch12"> <Button className="bg-blue-600 hover:bg-blue-700 text-white px-14 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-transform transform hover:scale-105 font-semibold">
               Start Learning Today
-            </Button>
+            </Button></Link>
 
             <Button
               variant="outline"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-8 py-4 text-lg rounded-lg transition-all duration-300 flex items-center gap-2 font-semibold"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-10 py-5 text-lg rounded-lg transition-all duration-300 flex items-center gap-2 font-semibold"
             >
               <Play className="w-5 h-5" />
               Watch Demo

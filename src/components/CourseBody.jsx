@@ -4,13 +4,14 @@ import CourseDetails from "./CourseDetails";
 import CourseIncludes from "./CourseIncludes";
 import CourseLearning from "./CourseLearnings";
 import JobGuidance from "./JobGuidance";
+import MentorDetails from "./MentorDetails";
 import ToolsGrid from "./ToolsGrid";
 
 const CourseBody = () => {
     return (
-        <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 min-h-screen">
-            {/* Hero Course Section */}
-            <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="bg-gradient-to-br mt-0 from-slate-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 min-h-screen">
+           
+            <section className="relative py-10 lg:py-18 overflow-hidden">
                 {/* Background Elements */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5 dark:from-blue-400/5 dark:to-purple-400/5"></div>
                 <div className="absolute top-0 left-0 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
@@ -19,14 +20,15 @@ const CourseBody = () => {
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
                     <div className="text-center mb-20">
-                        <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
+                        <div className="inline-flex items-center px-4 py-2 rounded-full  bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6">
                             <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
                             Featured Program
                         </div>
+                        
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
                             Transform Your Career with
                             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                                Industry-Leading DevOps
+                                Industry-Leading DevOps Course
                             </span>
                         </h1>
                         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -140,6 +142,16 @@ const CourseBody = () => {
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="transform hover:scale-[1.01] transition-transform duration-300">
                         <JobGuidance />
+                    </div>
+                </div>
+            </section>
+
+
+             <section className="relative py-20 lg:py-24 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm">
+                <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+                   
+                    <div className="transform hover:scale-[1.01] transition-transform duration-300">
+                        <MentorDetails />
                     </div>
                 </div>
             </section>

@@ -9,9 +9,9 @@ const CourseDetails = () => {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            <span className="text-sm font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-              Premium Course
+            <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+            <span className="text-lg font-bold text-red-600 dark:text-red-500 uppercase tracking-wider">
+              Live
             </span>
           </div>
           <div className="flex items-center gap-3">

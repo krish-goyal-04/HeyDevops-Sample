@@ -1,7 +1,18 @@
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+
 const Courses = ()=>{
     return(
         <div>
-            <h1>Welcome to courses page!</h1>
+            
         </div>
     )
 }
