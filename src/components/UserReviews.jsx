@@ -5,8 +5,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { FaQuoteLeft } from "react-icons/fa";
 
-// Demo review data
 const reviews = [
   {
     id: 1,
@@ -58,35 +58,43 @@ const reviews = [
   },
 ];
 
-const UserReviews = () => {
-  return (
-    <div className="max-w-4xl mx-auto py-8">
-      <Carousel loop={true}>
-        <CarouselContent className="flex space-x-6">
-          {reviews.map(({ id, name, rating, comment }) => (
-            <CarouselItem
-              key={id}
-              className="w-80 flex-shrink-0 rounded-2xl bg-white dark:bg-gray-800 shadow-lg p-6 text-gray-900 dark:text-gray-100 transition"
-            >
-              <div className="flex flex-col h-full">
-                <h3 className="font-bold text-xl mb-2">{name}</h3>
-                <p className="mb-4 text-yellow-400 text-lg">{'★'.repeat(rating)}{'☆'.repeat(5 - rating)}</p>
-                <p className="text-base leading-relaxed flex-1">"{comment}"</p>
+const UserReviews = () => (
+  <div className="w-full">
+    <Carousel className="w-full">
+      <CarouselContent>
+        {reviews.map((review) => (
+          <CarouselItem key={review.id}>
+            <div className="bg-gray-900 text-white rounded-2xl shadow-xl p-8 min-h-[280px] flex flex-col justify-center items-center relative">
+              {/* Quote Icon */}
+              <FaQuoteLeft className="absolute top-4 left-6 text-2xl text-blue-300/40" />
+              
+              {/* Reviewer Name */}
+              <h3 className="text-xl font-semibold mb-2 border-b-2 border-yellow-400 pb-1 px-2">
+                {review.name}
+              </h3>
+              
+              {/* Stars */}
+              <div className="flex mb-4">
+                {Array.from({ length: review.rating }).map((_, i) => (
+                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                ))}
+                {Array.from({ length: 5 - review.rating }).map((_, i) => (
+                  <span key={i} className="text-gray-500 text-lg">★</span>
+                ))}
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious
-          className="absolute top-1/2 left-0 -translate-y-1/2 rounded-full bg-blue-600 text-white p-2 shadow-lg hover:bg-blue-700 dark:bg-blue-400 dark:hover:bg-blue-500 transition cursor-pointer"
-          aria-label="Previous review"
-        />
-        <CarouselNext
-          className="absolute top-1/2 right-0 -translate-y-1/2 rounded-full bg-blue-600 text-white p-2 shadow-lg hover:bg-blue-700 dark:bg-blue-400 dark:hover:bg-blue-500 transition cursor-pointer"
-          aria-label="Next review"
-        />
-      </Carousel>
-    </div>
-  );
-};
+              
+              {/* Review Text */}
+              <p className="text-center text-blue-100 italic leading-relaxed">
+                "{review.comment}"
+              </p>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="left-4" />
+      <CarouselNext className="right-4" />
+    </Carousel>
+  </div>
+);
 
 export default UserReviews;
