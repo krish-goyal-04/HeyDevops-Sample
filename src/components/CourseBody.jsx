@@ -6,6 +6,8 @@ import CourseLearning from "./CourseLearnings";
 import JobGuidance from "./JobGuidance";
 import MentorDetails from "./MentorDetails";
 import ToolsGrid from "./ToolsGrid";
+import CertificationCard from "./CertificationCard"
+
 
 const CourseBody = () => {
     return (
@@ -152,6 +154,17 @@ const CourseBody = () => {
                    
                     <div className="transform hover:scale-[1.01] transition-transform duration-300">
                         <MentorDetails />
+                    </div>
+                </div>
+            </section>
+
+            <section className="relative py-20 lg:py-24 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 dark:from-gray-800/50 dark:to-gray-900/50">
+                <div className="absolute top-0 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl"></div>
+                
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="transform hover:scale-[1.01] transition-transform duration-300">
+                        <CertificationCard />
                     </div>
                 </div>
             </section>

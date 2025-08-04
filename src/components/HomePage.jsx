@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import HeroSection from "./HeroSection";
 import MentorDetails from "./MentorDetails";
+import WhyHeyDevops from "./WhyHeyDevops"
 
 const HomePage = () => {
   return (
@@ -10,9 +11,15 @@ const HomePage = () => {
       <div className="relative z-10">
         <HeroSection />
       </div>
-
+    <section className="relative w-full ">
+        <div className="w-full bg-white dark:bg-gray-800/70 backdrop-blur-xl py-24 lg:py-32">
+          <div className="max-w-7xl mx-auto px-6  pt-5 pb-8 dark:bg-gray-900 sm:px-12 rounded-3xl shadow-lg transform transition-transform duration-300 hover:scale-[1.02]">
+            <WhyHeyDevops />
+          </div>
+        </div>
+      </section>
       {/* Mentor Section */}
-      <section className="relative w-full ">
+      <section className="relative w-full dark:bg-gray-950 ">
         {/* Full-width background container */}
         <div className="w-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl py-24 lg:py-32">
           {/* Centered container with MentorDetails keeping its background */}
@@ -21,6 +28,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      
     </div>
   );
 };

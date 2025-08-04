@@ -4,7 +4,7 @@ import UserReviews from "./UserReviews";
 
 const CourseDetails = () => {
   return (
-    <div className="space-y-12 py-6">
+    <div className="space-y-12 ">
       {/* Clean Course Header */}
       <div className="space-y-6">
         <div className="flex items-center justify-between">
